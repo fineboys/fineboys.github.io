@@ -5,15 +5,23 @@
   
 
   
-  <title>Hexo</title>
+  <title>markdown | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Markdown-语法的学习markdownMarkdown 是一种轻量级标记语言，它允许人们使用易读易写        的纯文本格式编写文档。Markdown 语言在 2004 由约翰·格鲁伯（John Gruber）创        建。Markdown 能被使用来撰写电子书，如：Gitbook。当前许多        网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown">
+<meta property="og:url" content="http://yoursite.com/2020/08/08/markdown/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Markdown-语法的学习markdownMarkdown 是一种轻量级标记语言，它允许人们使用易读易写        的纯文本格式编写文档。Markdown 语言在 2004 由约翰·格鲁伯（John Gruber）创        建。Markdown 能被使用来撰写电子书，如：Gitbook。当前许多        网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/08/08/markdown/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80">
+<meta property="og:image" content="http://yoursite.com/2020/08/08/markdown/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80">
+<meta property="og:image" content="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1141259048,554497535&fm=26&gp=0.jpg">
+<meta property="article:published_time" content="2020-08-08T13:44:21.000Z">
+<meta property="article:modified_time" content="2020-08-08T13:45:10.880Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/08/08/markdown/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -66,9 +74,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-markdown" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-markdown" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/08/08/markdown/" class="article-date">
   <time datetime="2020-08-08T13:44:21.000Z" itemprop="datePublished">2020-08-08</time>
@@ -81,8 +87,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/08/markdown/">markdown</a>
+    <h1 class="article-title" itemprop="name">
+      markdown
     </h1>
   
 
@@ -207,52 +213,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-linux" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/08/04/linux/" class="article-date">
-  <time datetime="2020-08-04T09:35:28.000Z" itemprop="datePublished">2020-08-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/04/linux/">linux</a>
-    </h1>
+    <a href="/2020/08/04/linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">linux</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Linux的权限管理</strong><br>chown：改变文件拥有者<br>chown 用户名 文件/目录<br>chown 用户名：用户组：文件/目录<br>若是整个目次下的都改，则加-R参数用于递归更改。</p>
-<p>chgrp：转变文件所属用户组<br>chgrp 用户组 文件名<br>递归更改文件用户组，+-R就是整个目录下的文件用户组都会更改</p>
-<p>chmod：变动文件属性<br>chmod -R 123 文件或者目录<br>进行递归更改，同目录下所有文件都会变更</p>
-<p><strong>对于服务器需要配置特定账户的看法</strong><br>我们都知道linux是多用户多任务系统，大多数用作服务器，一台服务器会有很多人登陆管理。<br>此时可以通过用户组来设置权限就非常方便了，比如某个用户组只能看到某几个文件夹，其他的这个用户组不可见。如果只能对单个用户配置权限设置，既不方便，也不安全。</p>
-<p><strong>git和tomcat搭建过程</strong><br>首先安装git然后创建一个git用户，用来运行git服务，然后创建证书登陆，出于安全在禁用shell登陆，最后再给这个用户权限，允许他能干嘛访问啥，都要严格的把控。<br>下载解压安装tomcat，首先我们安装完tomcat后，删除 $CATALINA_HOME/webapps 下默认的所有目录文件<br>第二步如果不需要通过web部署应用，建议注释或删除tomcat-users.xml下用户权限相关配置<br>第三步 隐藏tomcat版本信息方法一修改 $CATALINA_HOME/conf/server.xml ,在Connector节点添加server字段方法二修改 $CATALINA_HOME/lib/catalina.jar::org/apache/catalina/util/ServerInfo.properties可自定义修改server.info字段和server.number字段<br>第四步关闭自动部署在 $CATALINA_HOME/conf/server.xml 中的host字段，修改 unpackWARs=”false” autoDeploy=”false” 。<br>第五步自定义错误页面配置tomcat/conf/server.xml修改web.xml,自定义40x、50x等容错页面，防止信息泄露。<br>第六步AJP端口管理AJP是为 Tomcat 与 HTTP 服务器之间通信而定制的协议，能提供较高的通信速度和效率。如果tomcat前端放的是apache的时候，会使用到AJP这个连接器。前端如果是由nginx做的反向代理的话可以不使用此连接器，因此需要注销掉该连接器。<br>最后启用cookie的HttpOnly属性修改 $CATALINA_HOME/conf/context.xml ，添加 <Context useHttpOnly="true">。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/04/linux/" data-id="ckdfqz3v000004ww8ea45901i" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
