@@ -145,6 +145,130 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/12/centos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/12/centos/" class="post-title-link" itemprop="url">centos</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-08-12 15:02:15 / Modified: 15:02:52" itemprop="dateCreated datePublished" datetime="2020-08-12T15:02:15+08:00">2020-08-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="centos7使用yum安装jdk"><a href="#centos7使用yum安装jdk" class="headerlink" title="centos7使用yum安装jdk"></a>centos7使用yum安装jdk</h1><h2 id="查看系统是否安装过java"><a href="#查看系统是否安装过java" class="headerlink" title="查看系统是否安装过java"></a>查看系统是否安装过java</h2><h3 id="yum-list-installed-grep-java"><a href="#yum-list-installed-grep-java" class="headerlink" title="yum list installed | grep java"></a><strong>yum list installed | grep java</strong></h3><h3 id="java-version"><a href="#java-version" class="headerlink" title="java -version"></a>java -version</h3><p><img src="C:\Users\fsl\Desktop\捕获1.PNG" alt="捕获1"></p>
+<h3 id="上图显示我们已经安装了，那么我们就先卸载"><a href="#上图显示我们已经安装了，那么我们就先卸载" class="headerlink" title="上图显示我们已经安装了，那么我们就先卸载"></a>上图显示我们已经安装了，那么我们就先卸载</h3><h3 id="使用命令yum-y-remove-java-1-8-0-openjdk-卸载"><a href="#使用命令yum-y-remove-java-1-8-0-openjdk-卸载" class="headerlink" title="使用命令yum -y remove java-1.8.0-openjdk*卸载"></a>使用命令<strong>yum -y remove java-1.8.0-openjdk*</strong>卸载</h3><h3 id="接着我们重新安装jdk"><a href="#接着我们重新安装jdk" class="headerlink" title="接着我们重新安装jdk"></a>接着我们重新安装jdk</h3><h3 id="yum-y-install-java-1-8-0-openjdk"><a href="#yum-y-install-java-1-8-0-openjdk" class="headerlink" title="yum -y install java-1.8.0-openjdk*"></a><strong>yum -y install java-1.8.0-openjdk*</strong></h3><p><img src="C:\Users\fsl\Desktop\捕获2.PNG" alt="捕获2"></p>
+<h3 id="接下来配置环境"><a href="#接下来配置环境" class="headerlink" title="接下来配置环境"></a>接下来配置环境</h3><p>ls /usr/lib/jvm</p>
+<p><img src="C:\Users\fsl\Desktop\捕获4.PNG" alt="捕获4"></p>
+<h3 id="编辑vim-etc-profile下的文件"><a href="#编辑vim-etc-profile下的文件" class="headerlink" title="编辑vim /etc/profile下的文件"></a>编辑vim /etc/profile下的文件</h3><p><img src="C:\Users\fsl\Desktop\捕获3.PNG" alt="捕获3"></p>
+<h1 id="centos7源码安装Mysql"><a href="#centos7源码安装Mysql" class="headerlink" title="centos7源码安装Mysql"></a>centos7源码安装Mysql</h1><h3 id="下载mysql"><a href="#下载mysql" class="headerlink" title="下载mysql"></a>下载mysql</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;dev.mysql.com&#x2F;get&#x2F;Downloads&#x2F;MySQL-5.7&#x2F;mysql-boost-5.7.23.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install cmake make gcc gcc-c++ bison ncurses ncurses-devel</span><br></pre></td></tr></table></figure>
+
+<h3 id="升级boost库"><a href="#升级boost库" class="headerlink" title="升级boost库"></a>升级boost库</h3><p><a target="_blank" rel="noopener" href="https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-boost-5.7.25.tar.gz">https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-boost-5.7.25.tar.gz</a></p>
+<p><img src="C:\Users\fsl\Desktop\捕获5.PNG" alt="捕获5"></p>
+<h3 id="解压：tar-zxvf-mysql-8-0-20-tar-gz"><a href="#解压：tar-zxvf-mysql-8-0-20-tar-gz" class="headerlink" title="解压：tar zxvf mysql-8.0.20.tar.gz"></a>解压：tar zxvf mysql-8.0.20.tar.gz</h3><h3 id="切换到：-cd-mysql-8-0-20"><a href="#切换到：-cd-mysql-8-0-20" class="headerlink" title="切换到： cd mysql-8.0.20"></a>切换到： cd mysql-8.0.20</h3><h3 id="使用cmake配置mysql"><a href="#使用cmake配置mysql" class="headerlink" title="使用cmake配置mysql"></a>使用cmake配置mysql</h3><p>cmake <br>-DCMAKE_BUILD_TYPE=RelWithDebInfo <br>-DCMAKE_INSTALL_PREFIX=/usr/local/web/mysql <br>-DMYSQL_UNIX_ADDR=/usr/local/web/mysql/mysql.sock <br>-DDEFAULT_CHARSET=utf8 <br>-DDEFAULT_COLLATION=utf8_general_ci <br>-DMYSQL_DATADIR=/home/mysql/data <br>-DSYSCONFDIR=/etc/my.cnf <br>-DWITH_MYISAM_STORAGE_ENGINE=1 <br>-DWITH_INNOBASE_STORAGE_ENGINE=1 <br>-DWITH_PARTITION_STORAGE_ENGINE=1 <br>-DENABLE_DEBUG_SYNC=0 <br>-DENABLED_LOCAL_INFILE=1 <br>-DENABLED_PROFILING=1 <br>-DMYSQL_TCP_PORT=3306 <br>-DWITH_DEBUG=0 <br>-DWITH_SSL=yes \</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> -DDOWNLOAD_BOOST&#x3D;1 \</span><br><span class="line">-DWITH_BOOST&#x3D;&#96;&#96;&#x2F;usr&#x2F;local&#x2F;boost </span><br></pre></td></tr></table></figure>
+
+<h3 id="创建mysql用户和用户组"><a href="#创建mysql用户和用户组" class="headerlink" title="创建mysql用户和用户组"></a><strong>创建mysql用户和用户组</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupadd mysql</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd  -s &#x2F;bin&#x2F;bash -m -g mysql mysql</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建的目录的所属用户与所属组为mysql-mysql"><a href="#创建的目录的所属用户与所属组为mysql-mysql" class="headerlink" title="创建的目录的所属用户与所属组为mysql:mysql"></a><strong>创建的目录的所属用户与所属组为mysql:mysql</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir  &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;data</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R mysql:mysql &#x2F;usr&#x2F;local&#x2F;mysql</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>[client]<br>port        = 3306<br>socket      = /tmp/mysql.sock</p>
+<p>[mysqld]<br>port        = 3306<br>socket      = /tmp/mysql.sock<br>user = mysql</p>
+<p>basedir = /usr/local/mysql<br>datadir = /data/mysql/data<br>pid-file = /data/mysql/mysql.pid</p>
+<p>log_error = /data/mysql/mysql-error.log<br>slow_query_log = 1<br>long_query_time = 1<br>slow_query_log_file = /data/mysql/mysql-slow.log</p>
+<p>skip-external-locking<br>key_buffer_size = 32M<br>max_allowed_packet = 1024M<br>table_open_cache = 128<br>sort_buffer_size = 768K<br>net_buffer_length = 8K<br>read_buffer_size = 768K<br>read_rnd_buffer_size = 512K<br>myisam_sort_buffer_size = 8M<br>thread_cache_size = 16<br>query_cache_size = 16M<br>tmp_table_size = 32M<br>performance_schema_max_table_instances = 1000</p>
+<p>explicit_defaults_for_timestamp = true<br>#skip-networking<br>max_connections = 500<br>max_connect_errors = 100<br>open_files_limit = 65535</p>
+<p>log_bin=mysql-bin<br>binlog_format=mixed<br>server_id   = 232<br>expire_logs_days = 10<br>early-plugin-load = “”</p>
+<p>default_storage_engine = InnoDB<br>innodb_file_per_table = 1<br>innodb_buffer_pool_size = 128M<br>innodb_log_file_size = 32M<br>innodb_log_buffer_size = 8M<br>innodb_flush_log_at_trx_commit = 1<br>innodb_lock_wait_timeout = 50</p>
+<p>[mysqldump]<br>quick<br>max_allowed_packet = 16M</p>
+<p>[mysql]<br>no-auto-rehash</p>
+<p>[myisamchk]<br>key_buffer_size = 32M<br>sort_buffer_size = 768K<br>read_buffer = 2M<br>write_buffer = 2M</p>
+<h3 id="初始化mysql"><a href="#初始化mysql" class="headerlink" title="初始化mysql"></a>初始化mysql</h3><p>./mysqld –initialize-insecure –user=mysql –basedir=/usr/local/mysql –datadir=/data/mysql/data</p>
+<h3 id="拷贝可执行文件"><a href="#拷贝可执行文件" class="headerlink" title="拷贝可执行文件"></a>拷贝可执行文件</h3><p>cp mysql.server /etc/init.d/mysqld</p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>service mysqld start</p>
+<h2 id="centos下的yum-rpm和源码三种安装方式的区别"><a href="#centos下的yum-rpm和源码三种安装方式的区别" class="headerlink" title="centos下的yum rpm和源码三种安装方式的区别"></a>centos下的yum rpm和源码三种安装方式的区别</h2><h2 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h2><h3 id="源码安装优点"><a href="#源码安装优点" class="headerlink" title="源码安装优点"></a>源码安装优点</h3><p>1、文档齐全</p>
+<p>2、因为可以定位到代码，所以debug方便</p>
+<p>3、本机兼容性最好<img src="C:\Users\fsl\Desktop\1.png" alt="1">（由于是本机编译的，只要编译通过，就没有各种库的依赖的问题）</p>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><h3 id="编译和软件升级麻烦"><a href="#编译和软件升级麻烦" class="headerlink" title="编译和软件升级麻烦"></a>编译和软件升级麻烦</h3><h3 id="rpm安装"><a href="#rpm安装" class="headerlink" title="rpm安装"></a>rpm安装</h3><h3 id="RPM命名“RedHat-Package-Manager”，简称则为RPM。"><a href="#RPM命名“RedHat-Package-Manager”，简称则为RPM。" class="headerlink" title="RPM命名“RedHat Package Manager”，简称则为RPM。"></a>RPM命名“RedHat Package Manager”，简称则为RPM。</h3><h3 id="RPM最大的特点就是需要安装的软件已经编译过，并已经打包成RPM机制的安装包，通过里头默认的数据库记录这个软件安装时需要的依赖软件。当安装在你的Linux主机时，RPM会先依照软件里头的数据查询Linux主机的依赖属性软件是否满足，若满足则予以安装，若不满足则不予安装。"><a href="#RPM最大的特点就是需要安装的软件已经编译过，并已经打包成RPM机制的安装包，通过里头默认的数据库记录这个软件安装时需要的依赖软件。当安装在你的Linux主机时，RPM会先依照软件里头的数据查询Linux主机的依赖属性软件是否满足，若满足则予以安装，若不满足则不予安装。" class="headerlink" title="RPM最大的特点就是需要安装的软件已经编译过，并已经打包成RPM机制的安装包，通过里头默认的数据库记录这个软件安装时需要的依赖软件。当安装在你的Linux主机时，RPM会先依照软件里头的数据查询Linux主机的依赖属性软件是否满足，若满足则予以安装，若不满足则不予安装。"></a>RPM最大的特点就是需要安装的软件已经编译过，并已经打包成RPM机制的安装包，通过里头默认的数据库记录这个软件安装时需要的依赖软件。当安装在你的Linux主机时，RPM会先依照软件里头的数据查询Linux主机的依赖属性软件是否满足，若满足则予以安装，若不满足则不予安装。</h3><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>1）软件已经编译打包，所以传输和安装方便，让用户免除编译</p>
+<p>2）在安装之前，会先检查系统的磁盘、操作系统版本等，避免错误安装</p>
+<p>3）软件的信息都已经记录在linux主机的数据库上，方便查询、升级和卸载</p>
+<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3><p>1）软件包安装的环境必须与打包时的环境一致或相当</p>
+<p>2）必须安装了软件的依赖软件</p>
+<p>3）卸载时，最底层的软件不能先移除，否则可能造成整个系统不能用</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>rpm -i 需要安装的包文件</p>
+<p>rpm -iv 需要安装的包文件(显示安装详情)</p>
+<p>rpm -ivh 需要安装的包文件(显示安装详情及进度)</p>
+<h3 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h3><p>rpm -U 需要升级的包文件</p>
+<p>rpm -Uvh 需要升级的包文件(显示升级详情及进度)</p>
+<h3 id="yum安装"><a href="#yum安装" class="headerlink" title="yum安装"></a>yum安装</h3><h3 id="YUM可以看作是CS架构的软件，YUM的存在很好的解决了RPM的属性依赖问题。"><a href="#YUM可以看作是CS架构的软件，YUM的存在很好的解决了RPM的属性依赖问题。" class="headerlink" title="YUM可以看作是CS架构的软件，YUM的存在很好的解决了RPM的属性依赖问题。"></a>YUM可以看作是CS架构的软件，YUM的存在很好的解决了RPM的属性依赖问题。</h3><h3 id="YUM通过依赖rpm软件包管理器-实现了rpm软件包管理器在功能上的扩展-因此YUM是不能脱离rpm而独立运行的。"><a href="#YUM通过依赖rpm软件包管理器-实现了rpm软件包管理器在功能上的扩展-因此YUM是不能脱离rpm而独立运行的。" class="headerlink" title="YUM通过依赖rpm软件包管理器, 实现了rpm软件包管理器在功能上的扩展, 因此YUM是不能脱离rpm而独立运行的。"></a>YUM通过依赖rpm软件包管理器, 实现了rpm软件包管理器在功能上的扩展, 因此YUM是不能脱离rpm而独立运行的。</h3><h3 id="YUM的特点"><a href="#YUM的特点" class="headerlink" title="YUM的特点"></a>YUM的特点</h3><p>1）可以同时配置多个资源库(Repository)</p>
+<p>2）简洁的配置文件(/etc/yum.conf)</p>
+<p>3）自动解决增加或删除rpm包时遇到的依赖性问题</p>
+<p>4）使用方便</p>
+<p>5）保持与RPM数据库的一致性</p>
+<h3 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h3><p>1、安装: yum install 软件</p>
+<p>2、升级: yum update 软件</p>
+<p>3、删除: yum remove 软件</p>
+<p>4、查看: yum info 软件</p>
+<p>5、搜索软件: yum search 软件</p>
+<p>6、查看依赖关系: yum deplist 软件</p>
+<p>7、查看已安装软件: yum list installded</p>
+
+      
+    </div>
+
+    
+    
+    
+
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/08/markdown/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -443,7 +567,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
