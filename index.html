@@ -168,10 +168,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-08-13 17:06:01 / Modified: 17:27:08" itemprop="dateCreated datePublished" datetime="2020-08-13T17:06:01+08:00">2020-08-13</time>
+              <time title="Created: 2020-08-13 17:06:01" itemprop="dateCreated datePublished" datetime="2020-08-13T17:06:01+08:00">2020-08-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-16 23:23:44" itemprop="dateModified" datetime="2020-08-16T23:23:44+08:00">2020-08-16</time>
+              </span>
 
           
 
@@ -211,14 +217,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls &#x2F;etc&#x2F;httpd&#x2F;modules&#x2F; | grep libphp</span><br></pre></td></tr></table></figure>
 
 <p>接着为了测试我们php是否安装成功访问一下浏览器</p>
-<p><img src="/2020/08/13/centos7%E6%90%AD%E5%BB%BA/Users\fsl\Desktop\boke\source_posts\centos7搭建\捕获.PNG" alt="捕获"></p>
+<p><img src="https://ftp.bmp.ovh/imgs/2020/08/da3abf435cc8520b.png"></p>
 <p>配置防火墙无法web端口访问</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --remove-port&#x3D;80&#x2F;tcp --permanent</span><br></pre></td></tr></table></figure>
 
 <p>禁止icmp协议</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT -p icmp -s 192.168.192.112 -j DROP</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/08/13/centos7%E6%90%AD%E5%BB%BA/Users\fsl\Desktop\boke\source_posts\centos7搭建\捕获6.PNG" alt="捕获6"></p>
+<p><img src="https://ftp.bmp.ovh/imgs/2020/08/c4947a9d2047d50b.png"></p>
 <p>配置ssh禁止root登陆</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;ssh&#x2F;sshd_config</span><br></pre></td></tr></table></figure>
 
@@ -238,11 +244,12 @@
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/08/13/centos7%E6%90%AD%E5%BB%BA/Users\fsl\Desktop\boke\source_posts\centos7搭建\捕获7.PNG" alt="捕获7"></p>
+<p><img src="https://ftp.bmp.ovh/imgs/2020/08/279e2488203c6257.png"></p>
 <p>centos7搭建LNMP</p>
 <p>安装nginx</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install nginx</span><br></pre></td></tr></table></figure>
 
+<p><img src="https://ftp.bmp.ovh/imgs/2020/08/6415ca3342a96781.png"></p>
 <p>开机启动设置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable nginx</span><br><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
 
@@ -272,7 +279,8 @@
 
 
 
-<p><img src="/2020/08/13/centos7%E6%90%AD%E5%BB%BA/Users\fsl\Desktop\boke\source_posts\centos7搭建\捕获8.png" alt="捕获8"></p>
+<p><img src="https://ftp.bmp.ovh/imgs/2020/08/9918b5a77da8ce72.png"></p>
+<p><img src="https://ftp.bmp.ovh/imgs/2020/08/0d8762fc707e1f8b.png"></p>
 
       
     </div>
